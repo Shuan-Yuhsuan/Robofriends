@@ -1,0 +1,70 @@
+
+///////////////////////// REACT Guide book //////////////////////////
+
+0. What is REACT?
+    it's a powerful package maintained by Facebook
+
+1. Install the REACT package & create a REACT app (as of 2021.5)
+
+    $ cd DirectoryChosen
+    $ npx create-react-app ProjectFolderName
+
+        -> it installs the react package and creates an app at the same time
+        -> documentation: https://reactjs.org/docs/create-a-new-react-app.html
+
+2. Check the app
+
+    (0) $ cd ProjectFolderName
+    (1) open the "package.json" file
+    (2) find "scripts" -> and we see "start"
+    (3) terminal: $ npm start -> then it runs the app in my browser
+
+3. Update the version of the libraries in your react app
+    
+    I. Mannually update to the latest version
+
+    (1) check the latest version (by creating a new app): 
+        (a) terminal: $create-react-app ProjectFolderName
+        (b) open the package.json file in the newly created folder
+        (c) check "dependencies"/"react-scripts", and memorize the version number (may also update the version of "react")
+    
+    (2) update the dependencies in the "package.json" file
+        (a) return to your original project folder, open up "package.json"
+        (b) update the 'dependencies'/'react-scripts' version number with the new one (1)(c)
+    
+    (3) re-install the updated version of package in terminal
+        (a) $ cd "project folder"
+        (b) $ npm install (then it's gonna read the package.json file, and reinstall everything using "react-scripts" with the new version)
+    
+    (4) check if it still works with terminal
+
+        ($ cd the project folder) 
+        $ npm start
+
+    II. Auto update with npm commands
+
+    (0) $npm start
+    (1) $npm audit fix -> auto fix for you (but might not fix them completely)
+    (2) $npm audit -> check your dependencies and show how many vulnerabilities there are
+    (3) $npm update -> update the newer compatible versions (but not necessarily latest)
+    (4) $npm audit fix --force -> when you've checked all the vulnerabilities and assume everything would be fine, then use this
+    
+    (5) $npm audit to check vulnerabilities again, $npm start to check if the app still works
+
+4. Deployment
+    (0) $npm run build -> React creates a build folder for easier deployment later
+    (1) 
+
+
+///////////////////////// Older version //////////////////////////
+
+step 4 & 5 are replaced by step 1
+
+4. install REACT in terminal (installed in May 2021)
+    
+    sudo npm install -g create-react-app
+
+5. create a react project in terminal
+
+    $ create-react-app ProjectName
+

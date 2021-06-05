@@ -1,0 +1,19 @@
+/* Setting the font for the <h1> header */
+
+/* 1. google a free font you like and download it, copy the codes in the css file downloaded */
+@font-face {
+    font-family: 'SEGA LOGO FONT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+    }
+
+/* 2. set the style for your header */
+h1 {
+    font-family: 'SEGA LOGO FONT';
+    font-weight: 200;
+    color: #0ccac4;
+}
+
+/* 3. Drag the .woff file downloaded into the src folder(the same directory), so that this CSS file can access it */
+/* 4. import this App.css file into App.js */
