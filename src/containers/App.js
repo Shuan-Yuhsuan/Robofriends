@@ -17,7 +17,7 @@ class App extends Component{
     }
 
     componentDidMount(){
-        fetch('http://jsonplaceholder.typicode.com/users')   // go to an external API (jsonplaceholder is a Free fake API for testing and prototyping.)        )
+        fetch('https://jsonplaceholder.typicode.com/users')   // go to an external API (jsonplaceholder is a Free fake API for testing and prototyping.)        )
             .then(Response => Response.json())  // get a response from that API, and process it with .json()
             .then(users => this.setState({ robots: users}));    // receive users, and update the users with setState
         
