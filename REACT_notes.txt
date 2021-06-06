@@ -52,19 +52,48 @@
     (5) $npm audit to check vulnerabilities again, $npm start to check if the app still works
 
 4. Deployment
-    (0) $npm run build -> React creates a build folder for easier deployment later
-    (1) 
+    (0) Preprocess: React documentation https://create-react-app.dev/docs/deployment/#github-pages
+        (a) in "package.json", add
+            "homepage": "https://myusername.github.io/githubRepoName",
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d build",
+        (b) $ npm install --save gh-pages
+
+    (1) Push this depository to github
+        (a) create a new depository in GitHub
+        
+        $ cd 'project folder'
+        
+        (b) $ git init
+            (create a remote repository in this folder)
+        (c) $ git remote add origin https://... 
+            (copied from GitHub)
+        (d) $ git status => $ git add . => $ git commit -m '...' 
+            (to include all the changes if necessary)
+        (e) $ git push -u origin main 
+            (copied from GitHub)
+
+    (2) Deploy the app to GitHub page
+        (a) $ npm run deploy 
+            (with step 0a, 'build' command will be run and create a 'build' folder)
+        (b) Check it out on GitHub
+            Repository => Settings => Pages => Source (select brance "gh-pages") => click the url "your site is published at https://..."
+        (c) Create a shortcut
+            back to the "<> Code" tab of the Repository => paste the url above to "about"
+    (3) Update 
+        (a) Push the changes to GitHub: repeat step 1d~1e
+        (b) Deploy again: repeat step 2a
 
 
 ///////////////////////// Older version //////////////////////////
 
-step 4 & 5 are replaced by step 1
+step 100 & 101 are replaced by step 1
 
-4. install REACT in terminal (installed in May 2021)
+100. install REACT in terminal (installed in May 2021)
     
     sudo npm install -g create-react-app
 
-5. create a react project in terminal
+101. create a react project in terminal
 
     $ create-react-app ProjectName
 
